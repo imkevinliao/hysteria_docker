@@ -15,11 +15,12 @@ PORT=12345 && docker run -d --restart=always -p $PORT:443/udp -e PORT="$PORT" --
 docker stop hysteria && docker rm hysteria  && docker rmi kevinstarry/hysteria:latest
 ```
 # 了解更多
-查看链接（自动获取ipv4然后生成链接）：docker exec -it hysteria cat /app/info.txt
-
-自签证书设置的 36500 天
-
 用的最新的 hysteria version：v2.6.2
 
+查看链接（自动获取ipv4然后生成链接）：docker exec -it hysteria cat /app/info.txt
+
+自签证书设置的 36500 天，路径
+
 cert: /app/server.pem
+
 key: /app/server.key
