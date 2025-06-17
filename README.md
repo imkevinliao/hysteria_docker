@@ -1,6 +1,7 @@
 # hysteria docker
-起初是打算看看有没有人有现成的方案，结果没找到。找到的是 docker compose 方式启动的，好处就是自己编辑，但是我都用docker了，我就是想要一键完成那咋办？
+没有找到别人的一键启动方案，有的都是 docker-compose 配置后启动，我都用docker了，还要搞这么多那还是用别人的脚本叭。
 
+docker 好处就是让系统更干净，无论是部署，还是卸载都干干净净，不影响服务器。
 # 使用文档
 一键部署
 ```
@@ -13,3 +14,7 @@ PORT=12345 && docker run -d --restart=always -p $PORT:443/udp -e PORT="$PORT" --
 ```
 docker stop hysteria && docker rm hysteria  && docker rmi kevinstarry/hysteria:latest
 ```
+# 了解更多
+hysteria version：v2.6.2
+cert: /app/server.pem
+key: /app/server.key
