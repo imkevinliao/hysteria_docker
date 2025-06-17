@@ -4,6 +4,10 @@
 我都用 docker 了，还要搞这么多那还是用别人的脚本叭。
 
 docker 好处就是让系统更干净，无论是部署，还是卸载都干干净净，不影响服务器。
+
+我不喜欢用脚本的原因之一就是一旦使用了别人的脚本容易把服务器搞脏，而docker可以保证你在科学上网同时，服务器该干什么就干什么。
+
+hysteria udp 全看运营商和VPS商脸色，建议辅reality（docker）：https://github.com/imkevinliao/xray_reality_docker
 # 使用文档
 准备docker（已经准备好了则忽略）
 ```
