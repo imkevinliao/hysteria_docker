@@ -31,3 +31,5 @@ docker stop hysteria && docker rm hysteria  && docker rmi kevinstarry/hysteria:l
 cert: /app/server.pem
 
 key: /app/server.key
+
+密码证书都是自动生成的，本来想弄成密码可以指定的，但是感觉还是随机生成好，啥也别思考，一条命令直接启动就是了，不行的话就一条命令直接移除，试错成本极低
