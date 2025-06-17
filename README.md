@@ -1,8 +1,15 @@
 # hysteria docker
-没有找到别人的一键启动方案，有的都是 docker-compose 配置后启动，我都用docker了，还要搞这么多那还是用别人的脚本叭。
+没有找到别人的一键启动方案，有的都是 docker-compose 配置后启动。
+
+我都用 docker 了，还要搞这么多那还是用别人的脚本叭。
 
 docker 好处就是让系统更干净，无论是部署，还是卸载都干干净净，不影响服务器。
 # 使用文档
+准备docker（已经准备好了则忽略）
+```
+curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
+```
+
 一键部署
 ```
 PORT=12345 && docker run -d --restart=always -p $PORT:443/udp -e PORT="$PORT" --name hysteria kevinstarry/hysteria:latest  && sleep 3 && docker exec -it hysteria cat /app/info.txt
