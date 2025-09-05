@@ -26,14 +26,14 @@ PORT=12346 && docker run -d --restart=always -p $PORT:443/udp -e PORT="$PORT" --
 docker stop hysteria && docker rm hysteria  && docker rmi kevinstarry/hysteria:latest
 ```
 # 了解更多
-用的最新的 hysteria version：v2.6.2
+hysteria version：v2.6.2
 
 查看链接（自动获取ipv4然后生成链接）：docker exec -it hysteria cat /app/info.txt
 
-自签证书设置的 36500 天，路径
+自签证书设置的 36500 天
 
 cert: /app/server.pem
 
 key: /app/server.key
 
-密码证书都是自动生成的，本来想弄成密码可以指定的，但是感觉还是随机生成好，啥也别思考，一条命令直接启动就是了，不行的话就一条命令直接移除，试错成本极低
+密码证书都是自动生成的，本来想弄成密码可以指定的，但是感觉还是随机生成好，懒人不想思考
