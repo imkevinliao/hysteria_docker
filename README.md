@@ -10,9 +10,9 @@ hysteria 使用 udp 看运营商 和 VPS提供商 是否封禁，建议辅 reali
 curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
 ```
 
-部署hysteria （不想使用默认端口？自行修改 PORT=12346 改成你服务器暴露的端口）
+部署hysteria （不想使用12345端口？自行修改 PORT=12345）
 ```
-PORT=12346 && docker run -d --restart=always -p $PORT:443/udp -e PORT="$PORT" --name hysteria kevinstarry/hysteria:latest  && sleep 3 && docker exec -it hysteria cat /app/info.txt
+PORT=12345 && docker run -d --restart=always -p $PORT:443/udp -e PORT="$PORT" --name hysteria kevinstarry/hysteria:latest  && sleep 3 && docker exec -it hysteria cat /app/info.txt
 ```
 
 一键移除
