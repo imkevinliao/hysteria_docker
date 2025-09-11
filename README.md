@@ -3,7 +3,7 @@
 
 我都用 docker 了，还要搞这么多那还是用别人的脚本叭。
 
-我不喜欢用脚本的原因就是容易把服务器搞脏，而docker可以保证你在科学上网同时，完全不影响服务器使用。
+我不喜欢用脚本的原因就是容易把服务器搞脏，我甚至不希望在宿主机上留下任何痕迹文件（配置文件）
 
 hysteria 使用 udp 看运营商 和 VPS提供商 是否封禁，建议辅 reality（docker）：https://github.com/imkevinliao/xray_reality_docker
 # 使用文档
