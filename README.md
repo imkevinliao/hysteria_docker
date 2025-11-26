@@ -24,7 +24,7 @@ hysteria version：v2.6.2
 
 查看链接（自动获取ipv4然后生成链接）：docker exec -it hysteria cat /app/info.txt
 
-自签证书设置的 36500 天（没有人真的会用十年吧）
+自签证书设置的 3650 天（没有人真的会用十年吧）
 
 cert: /app/server.pem
 
