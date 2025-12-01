@@ -10,24 +10,25 @@ hysteria 使用 udp 看运营商 和 VPS提供商 是否封禁，建议辅 reali
 curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
 ```
 
-部署hysteria （不想使用12345端口？自行修改 PORT=12345）
+部署hysteria (指定端口PORT=XXXX)
 ```
-PORT=12345 && docker run -d --restart=always -p $PORT:443/udp -e PORT="$PORT" --name hysteria kevinstarry/hysteria:latest  && sleep 3 && docker exec -it hysteria cat /app/info.txt
+PORT=12345 && docker run -d --restart=always -p $PORT:443/udp -e PORT="$PORT" --name hysteria kevinstarry/hysteria:latest
 ```
-
 一键移除
 ```
 docker stop hysteria && docker rm hysteria  && docker rmi kevinstarry/hysteria:latest
 ```
 # 了解更多
-hysteria version：v2.6.2
+hysteria version：v2.6.5
 
-查看链接（自动获取ipv4然后生成链接）：docker exec -it hysteria cat /app/info.txt
+查看链接：docker exec -it hysteria cat /app/info.txt
 
-自签证书设置的 3650 天（没有人真的会用十年吧）
+自签证书设置的 36500 天（没有人真的会用一百年吧）
 
 cert: /app/server.pem
 
 key: /app/server.key
 
-密码证书都是自动生成的，本来想弄成密码可以指定的，但是感觉还是随机生成好，懒人不想思考
+V3.0版本增加了二维码，方便直接扫码导入，启动容器会直接生成
+
+密码证书都是随机自动生成的，更新QR后linux镜像从alpine:latest换成了debian:bookworm-slim，用空间换便利。
