@@ -12,7 +12,7 @@ curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
 
 部署hysteria (指定端口PORT=XXXX)
 ```
-PORT=12345 && docker run -d --restart=always -p $PORT:443/udp -e PORT="$PORT" --name hysteria kevinstarry/hysteria:latest
+PORT=12345 && docker run -d --restart=always -p $PORT:443/udp -e PORT="$PORT" --name hysteria kevinstarry/hysteria:latest && sleep 3 && docker exec -it hysteria cat /app/info.txt
 ```
 一键移除
 ```
@@ -29,6 +29,4 @@ cert: /app/server.pem
 
 key: /app/server.key
 
-V3.0版本增加了二维码，方便直接扫码导入，启动容器会直接生成
-
-密码证书都是随机自动生成的，更新QR后linux镜像从alpine:latest换成了debian:bookworm-slim，用空间换便利。
+密码证书都是随机自动生成的，V3.0版本增加了二维码，方便直接扫码导入，linux镜像从alpine:latest换成了debian:bookworm-slim。
